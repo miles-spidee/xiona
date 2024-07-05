@@ -21,15 +21,15 @@ body {
 }
 
 /* custom scroll-bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0.2vw;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: white;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: linear-gradient(130deg, rgba(2, 0, 36, 1) 0%, rgba(37, 48, 237, 1) 23%, rgba(36, 46, 237, 1) 35%, rgba(18, 18, 231, 1) 49%, rgba(37, 14, 237, 1) 58%, rgba(62, 8, 244, 1) 70%, rgba(98, 0, 255, 1) 82%);
 }
 
@@ -293,7 +293,7 @@ body {
 }
 
 .features .item .f-caption {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: monospace;
     letter-spacing: 2px;
     text-align: center;
@@ -309,6 +309,9 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
 
     .features {
         flex-wrap: wrap;
@@ -320,9 +323,14 @@ body {
         padding: 0;
         justify-content: flex-start;
     }
+
+    .features .item .f-caption {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
+
     .features {
         flex-direction: column;
         align-items: center;
@@ -349,12 +357,22 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .features .f-caption{
+    .features .f-caption {
         font-size: 1.2rem;
+    }
+
+    .two-title {
+        text-align: center;
+    }
+
+    .features {
+        height: 75vh;
+        padding-bottom: 2rem;
     }
 }
 
 @media only screen and (max-width: 500px) {
+
 
     .features .item {
         flex-direction: column;
@@ -364,11 +382,6 @@ body {
 @media only screen and (max-width: 400px) {
     .features .item {
         width: 80%;
-    }
-
-    .two-title {
-        text-align: center;
-
     }
 }
 
@@ -419,7 +432,7 @@ body {
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    background-color: rgb(245, 245, 245 , 0.2);
+    background-color: rgb(245, 245, 245, 0.2);
     min-height: 30%;
 }
 
@@ -431,6 +444,7 @@ body {
     border-radius: 100%;
     object-fit: cover;
     border: 2px solid white;
+    margin-right: 1rem;
 }
 
 .f-caption {
@@ -463,17 +477,17 @@ body {
     font-size: 1.5rem;
 }
 
-@media only screen and (max-width:1200px) {
-    .f-team .item{
+@media only screen and (max-width:1000px) and (min-width:650px) {
+    .f-team .item {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 1rem 1.2rem 2rem 1.2rem;
         margin: 1rem;
+        max-height: 45%;
     }
 
     .f-team .item img {
-        margin: 0;
         margin-bottom: 1rem;
     }
 
@@ -481,6 +495,7 @@ body {
         min-width: 100%;
         align-items: center;
         text-align: center;
+        padding-left: 1rem;
     }
 
     .f-team .item .role {
@@ -490,15 +505,24 @@ body {
     }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:650px) {
 
     .f-team {
-        height: 20%;
+        background-color: blue;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
-    .f-team .item{
+    .f-team .item {
+        height: 20px;
         width: 100%;
-        flex-direction: row;
+    }
+
+    .f-team .item img {
+        height: 7rem;
+        width: 7rem;
     }
 }
 
@@ -620,7 +644,7 @@ footer ol li {
     opacity: 0.4;
 }
 
-/* footer .made-by {
+footer .made-by {
     padding-bottom: 3rem;
     text-align: center;
-} */
+}
